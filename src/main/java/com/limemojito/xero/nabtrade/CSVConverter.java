@@ -25,7 +25,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.text.ParseException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -57,10 +56,9 @@ public class CSVConverter {
     /**
      * Perform the conversion.
      *
-     * @throws IOException    On an IO failure
-     * @throws ParseException On an issue parsing the CSV.
+     * @throws IOException On an IO failure
      */
-    public void convert() throws IOException, ParseException {
+    public void convert() throws IOException {
         File[] files = this.inputDir.listFiles((dir, name) -> name.endsWith("csv"));
         if (files == null) {
             throw new IOException("No CSV files found");
@@ -122,7 +120,7 @@ public class CSVConverter {
         return dr;
     }
 
-    private List<String[]> readInput(File file) throws IOException, ParseException {
+    private List<String[]> readInput(File file) throws IOException {
         try (CSVReader reader = new CSVReader(new FileReader(file), ',')) {
             return reader.readAll();
         }
