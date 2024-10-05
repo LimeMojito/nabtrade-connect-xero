@@ -20,8 +20,17 @@ package com.limemojito.xero.nabtrade;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Performs a conversion of downloaded Nab Trade statements to Xero CSV import format.
+ */
 public class Main {
 
+    /**
+     * Supply the directory to read CSV files from.
+     *
+     * @param args main program arguments.
+     * @throws Exception On a failure.
+     */
     public static void main(String[] args) throws Exception {
         if (args.length != 1) {
             throw new RuntimeException("Usage: inDir");
@@ -32,8 +41,7 @@ public class Main {
             throw new IOException("Input is not a directory");
         }
 
-        CSVConverter converter = new CSVConverter();
-        converter.setInputDir(input);
+        CSVConverter converter = new CSVConverter(input);
         converter.convert();
     }
 }
