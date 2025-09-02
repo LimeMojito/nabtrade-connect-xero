@@ -1,10 +1,10 @@
-name: OSS Maven Standards Merge Build
+name: Nabtrade Connect Xero Merge Build
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 jobs:
   oss-maven-workflow:
