@@ -30,6 +30,7 @@ import java.util.List;
 
 import static java.math.RoundingMode.HALF_UP;
 import static java.util.Arrays.asList;
+import static org.apache.commons.lang3.StringUtils.isBlank;
 import static org.apache.commons.lang3.StringUtils.trim;
 
 /**
@@ -107,7 +108,7 @@ public class CSVConverter {
         final int creditIndex = 4;
         final BigDecimal dr = readDecimal(inputLine[debitIndex]);
         final BigDecimal cr = readDecimal(inputLine[creditIndex]);
-        final BigDecimal tx = cr.subtract(dr);
+        final BigDecimal tx = cr.add(dr);
         final List<String> newLine = new LinkedList<>(asList(inputLine).subList(0, debitIndex));
         newLine.add(tx.toString());
         newLine.addAll(asList(inputLine).subList(debitIndex, INPUT_TITLES.length));
@@ -115,9 +116,14 @@ public class CSVConverter {
     }
 
     private BigDecimal readDecimal(String val) {
-        BigDecimal dr = new BigDecimal(trim(val));
+        BigDecimal dr = new BigDecimal(trimToZero(val));
         dr = dr.setScale(2, HALF_UP);
         return dr;
+    }
+
+    private static String trimToZero(String val) {
+        String trimmedString = trim(val);
+        return isBlank(trimmedString) ? "0" : trimmedString;
     }
 
     private List<String[]> readInput(File file) throws IOException {

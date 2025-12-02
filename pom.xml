@@ -21,17 +21,19 @@
 
     <groupId>com.limemojito.xero</groupId>
     <artifactId>nabtrade-connect-xero</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <parent>
         <groupId>com.limemojito.oss.standards</groupId>
         <artifactId>spring-boot-development</artifactId>
-        <version>15.3.2</version>
+        <version>15.3.5</version>
     </parent>
 
     <properties>
         <skipITs>true</skipITs>
+        <coverage.line.ratio>0.9</coverage.line.ratio>
+        <coverage.exclude.pattern.1>**Main</coverage.exclude.pattern.1>
     </properties>
 
     <dependencies>

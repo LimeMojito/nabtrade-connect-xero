@@ -1,4 +1,6 @@
-# NABtrade to Xero statement converter
+# nabtrade to Xero statement converter
+
+Updated for nabtrade UI update 2025
 
 ### Build
 
