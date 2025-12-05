@@ -27,7 +27,7 @@
     <parent>
         <groupId>com.limemojito.oss.standards</groupId>
         <artifactId>spring-boot-development</artifactId>
-        <version>15.3.5</version>
+        <version>16.0.0</version>
     </parent>
 
     <properties>
