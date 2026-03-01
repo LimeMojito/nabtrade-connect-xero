@@ -9,7 +9,7 @@ on:
 
 jobs:
   version-update:
-    uses: LimeMojito/oss-maven-standards/.github/workflows/oss-maven-patch-version@master
+    uses: LimeMojito/oss-maven-standards/.github/workflows/oss-maven-patch-version.yml@master
     secrets: inherit
     permissions:
       id-token: write
