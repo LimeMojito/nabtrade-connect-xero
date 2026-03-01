@@ -1,13 +1,17 @@
-name: OSS Maven Standards Versions Update
+name: Version Update Check
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "25 17 * * 4"
-    # at 5:25PM GMT or 3:25AM (+1) AEST on a Thursday
+    - cron: "25 18 * * 1"
+    # at 6:25PM GMT or 4:25AM (+1) AEST on a Monday
 
 
 jobs:
   version-update:
-    uses: LimeMojito/oss-maven-standards/.github/workflows/oss-maven-patch-version.yml@master
+    uses: ./.github/workflows/oss-maven-patch-version.yml
     secrets: inherit
+    permissions:
+      id-token: write
+      contents: write
+      pull-requests: write

@@ -1,0 +1,20 @@
+name: Feature Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches-ignore:
+      - main
+      - master
+  pull_request:
+    branches: [ "master" ]
+    types: [opened, reopened, ready_for_review, synchronize]
+
+jobs:
+  oss-maven-workflow:
+    uses: ./.github/workflows/oss-feature-build.yml
+    secrets: inherit
+    permissions:
+      contents: read
+      packages: read
+      id-token: write
