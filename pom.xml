@@ -1,5 +1,5 @@
 <!--
-  ~ Copyright 2011-2025 Lime Mojito Pty Ltd
+  ~ Copyright 2011-2026 Lime Mojito Pty Ltd
   ~
   ~    Licensed under the Apache License, Version 2.0 (the "License");
   ~    you may not use this file except in compliance with the License.
@@ -29,6 +29,11 @@
         <artifactId>spring-boot-development</artifactId>
         <version>17.0.0</version>
     </parent>
+
+    <name>${project.artifactId}</name>
+    <description>Convert a nabtrade download file to xero input format.
+    </description>
+    <url>${github.url}</url>
 
     <properties>
         <skipITs>true</skipITs>
