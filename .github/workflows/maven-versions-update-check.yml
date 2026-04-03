@@ -1,4 +1,4 @@
-name: Version Update Check
+name: Versions Update
 
 on:
   workflow_dispatch:
