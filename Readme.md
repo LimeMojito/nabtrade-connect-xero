@@ -20,6 +20,10 @@ java -jar target/nabtrade-connect-xero-0.1-SNAPSHOT.jar ~/Downloads
 
 ---
 
+# Latest Changes
+
+[CHANGELOG.md](CHANGELOG.md)
+
 # Version Updates
 
 * The plugin update requires manual checks as it is a report.
