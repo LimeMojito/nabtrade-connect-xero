@@ -30,16 +30,16 @@
         <version>17.0.19</version>
     </parent>
 
-    <name>${project.artifactId}</name>
-    <description>Convert a nabtrade download file to xero input format.
-    </description>
-    <url>${github.url}</url>
-
     <properties>
+        <git.project.slug>LimeMojito/nabtrade-connect-xero</git.project.slug>
         <skipITs>true</skipITs>
         <coverage.line.ratio>0.9</coverage.line.ratio>
         <coverage.exclude.pattern.1>**Main</coverage.exclude.pattern.1>
     </properties>
+
+    <name>${project.artifactId}</name>
+    <description>Convert a nabtrade download file to xero input format.</description>
+    <url>${github.url}</url>
 
     <dependencies>
         <dependency>
