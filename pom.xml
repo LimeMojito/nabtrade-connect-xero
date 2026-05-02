@@ -21,13 +21,13 @@
 
     <groupId>com.limemojito.xero</groupId>
     <artifactId>nabtrade-connect-xero</artifactId>
-    <version>1.0.4-SNAPSHOT</version>
+    <version>1.0.7-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <parent>
         <groupId>com.limemojito.oss.standards</groupId>
         <artifactId>spring-boot-development</artifactId>
-        <version>17.0.12</version>
+        <version>17.0.19</version>
     </parent>
 
     <name>${project.artifactId}</name>
