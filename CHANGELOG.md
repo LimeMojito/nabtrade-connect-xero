@@ -1,3 +1,7 @@
+# 1.0.9
+
+- Updated versions and security patches.
+
 # 1.0.8
 
 - Updated versions and security patches.
