@@ -1,3 +1,7 @@
+# 1.0.15
+
+- Updated versions and security patches.
+
 # 1.0.14
 
 - Updated versions and security patches.
