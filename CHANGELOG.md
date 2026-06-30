@@ -1,3 +1,7 @@
+# 1.0.16.36
+
+- Change cron schedule in maven-versions-update-check.yml.
+
 # 1.0.15
 
 - Updated versions and security patches.
