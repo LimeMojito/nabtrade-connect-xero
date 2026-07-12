@@ -41,6 +41,20 @@
     <description>Convert a nabtrade download file to xero input format.</description>
     <url>${github.url}</url>
 
+    <build>
+        <plugins>
+            <plugin>
+                <!-- Do not upload large artifacts to central -->
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <!-- Keep the same version used in your root POM -->
+                <configuration>
+                    <skipPublishing>true</skipPublishing>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.commons</groupId>
