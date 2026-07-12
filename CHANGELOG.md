@@ -1,3 +1,10 @@
+# 1.0.42
+
+- Updated versions and security patches.
+- Formatting
+- Change GitHub Actions permission from read to write
+- Update cron comment for clarity in workflow file
+
 # 1.0.16.36
 
 - Change cron schedule in maven-versions-update-check.yml.
