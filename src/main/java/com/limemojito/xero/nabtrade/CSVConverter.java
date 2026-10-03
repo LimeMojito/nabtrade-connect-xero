@@ -106,9 +106,12 @@ public class CSVConverter {
     private String[] createOutputLine(String[] inputLine) {
         final int debitIndex = 3;
         final int creditIndex = 4;
-        final BigDecimal dr = readDecimal(inputLine[debitIndex]);
+        // positive value in NABtrade file.
         final BigDecimal cr = readDecimal(inputLine[creditIndex]);
-        final BigDecimal tx = cr.add(dr);
+        // positive value in NABtrade file.
+        final BigDecimal dr = readDecimal(inputLine[debitIndex]);
+        // negative if debit majority value in NABtrade file.
+        final BigDecimal tx = cr.subtract(dr);
         final List<String> newLine = new LinkedList<>(asList(inputLine).subList(0, debitIndex));
         newLine.add(tx.toString());
         newLine.addAll(asList(inputLine).subList(debitIndex, INPUT_TITLES.length));
